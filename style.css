@@ -129,11 +129,12 @@ footer a{
   z-index: 1;
   transform: translateY(-50%);
   top: 50%;
+
+  animation: undoSlide 0.2s;
 }
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide 0.4s forwards;
 }
 
 #switch span {
@@ -147,11 +148,33 @@ footer a{
   border: 1px solid var(--stroke-color)
 }
 
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
 @media (min-width: 700px) {
   :root {
     --background: url(./assets/bg-desktop.jpg);
   }
   .light{
     --background: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes undoSlide {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
