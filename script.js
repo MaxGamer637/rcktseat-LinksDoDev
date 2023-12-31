@@ -8,10 +8,10 @@ function toggleMode() {
     img.setAttribute("src", "./assets/avatar-light.png")
     img.setAttribute(
       "alt",
-      "Foto de perfil do usuário do Mayk Brito usando um óculos de sol."
+      "Foto de perfil do usuário (Mayk Brito) usando um óculos de sol."
     )
   } else {
     img.setAttribute("src", "./assets/avatar.png")
-    img.setAttribute("alt", "Foto de perfil do usuário do Mayk Brito.")
+    img.setAttribute("alt", "Foto de perfil do usuário (Mayk Brito).")
   }
 }
